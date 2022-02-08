@@ -1320,7 +1320,7 @@ spec:
           value: /dev/stderr
         - name: KONG_PROXY_ERROR_LOG
           value: /dev/stderr
-        image: idgmcacr001.azurecr.cn/kong
+        image: idgmcacr001.azurecr.cn/kong:2.6
         lifecycle:
           preStop:
             exec:
@@ -1376,7 +1376,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: metadata.namespace
-        image: idgmcacr001.azurecr.cn/kong/kubernetes-ingress-controller
+        image: idgmcacr001.azurecr.cn/kong/kubernetes-ingress-controller:2.0.0
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
