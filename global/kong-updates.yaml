@@ -1,0 +1,13 @@
+# kong-updates.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: not-used
+spec:
+  template:
+    spec:
+      containers:
+        - image: idgmcacr001.azurecr.cn/kong:2.7
+          name: proxy
+        - image: idgmcacr001.azurecr.cn/kong/kubernetes-ingress-controller:2.0.0
+          name: ingress-controller
